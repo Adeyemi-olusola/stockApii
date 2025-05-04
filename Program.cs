@@ -1,9 +1,20 @@
+using api.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddControllers(); // Required for API endpoints
 builder.Services.AddEndpointsApiExplorer(); // Required for minimal APIs
 builder.Services.AddSwaggerGen(); // Adds Swagger generation
+
+builder.Services.AddDbContext<ApplicationDBContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+});
+
+
 
 var app = builder.Build();
 

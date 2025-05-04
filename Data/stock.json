@@ -1,0 +1,5 @@
+[
+    { "id": 1, "symbol": "AAPL", "companyName": "Apple Inc.", "price": 175.25 },
+    { "id": 2, "symbol": "MSFT", "companyName": "Microsoft Corp.", "price": 310.50 },
+    { "id": 3, "symbol": "GOOGL", "companyName": "Alphabet Inc.", "price": 135.75 }
+  ]
